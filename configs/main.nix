@@ -8,8 +8,8 @@
     ./i3status-rs.nix
     ./alacritty.nix
     ./picom.nix
+    ./redshift.nix
   ];
 
   xsession.enable = true;
-
 }

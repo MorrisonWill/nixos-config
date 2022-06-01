@@ -25,7 +25,33 @@
 	"XF86MonBrightnessUp" = "exec brightnessctl set 4%+";
 	"${modifier}+Return" = "exec ${pkgs.alacritty}/bin/alacritty";
 	"${modifier}+space" = "exec ${pkgs.rofi}/bin/rofi -modi drun -show drun";
-	"${modifier}+Shift+space" = "exec ${pkgs.firefox}/bin/firefox";
+	"${modifier}+Shift+Return" = "exec ${pkgs.firefox}/bin/firefox";
+
+	"${modifier}+h" = "focus left";
+	"${modifier}+j" = "focus down";
+	"${modifier}+k" = "focus up";
+	"${modifier}+l" = "focus right";
+
+	"${modifier}+Shift+h" = "move left";
+	"${modifier}+Shift+j" = "move down";
+	"${modifier}+Shift+k" = "move up";
+	"${modifier}+Shift+l" = "move right";
+
+	"${modifier}+b" = "splith";
+	"${modifier}+v" = "splitv";
+
+	"${modifier}+Shift+f" = "floating toggle";
+      };
+
+      modes = lib.mkOptionDefault {
+        resize = {
+	  "h" = "resize grow width 10 px or 10 ppt";
+	  "j" = "resize grow height 10 px or 10 ppt";
+	  "k" = "resize shrink height 10 px or 10 ppt";
+	  "l" = "resize shrink width 10 px or 10 ppt";
+	  "${modifier}+r" = "mode default";
+	};
+
       };
     };
 

@@ -63,7 +63,7 @@
         enable = true;
 
 	touchpad = {
-	  accelProfile = "flat";
+	  accelSpeed = "0.3";
 	  naturalScrolling = true;
 	  clickMethod = "clickfinger";
 	  tapping = true;
@@ -71,6 +71,8 @@
       };
       displayManager.lightdm.enable = true;
       desktopManager.xterm.enable = true;
+
+      xkbOptions = "ctrl:swapcaps";
 
     };
     tlp.enable = true;
