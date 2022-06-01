@@ -9,6 +9,8 @@
     ./alacritty.nix
     ./picom.nix
     ./redshift.nix
+    #./gtk.nix # breaks everything idk why
+    #./xss-lock.nix
   ];
 
   xsession.enable = true;

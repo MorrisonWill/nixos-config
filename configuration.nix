@@ -69,7 +69,16 @@
 	  tapping = true;
 	};
       };
-      displayManager.lightdm.enable = true;
+
+      displayManager = {
+        autoLogin.user = "user";
+	autoLogin.enable = true;
+
+	lightdm = {
+	  enable = true;
+	};
+      };
+
       desktopManager.xterm.enable = true;
 
       xkbOptions = "ctrl:swapcaps";

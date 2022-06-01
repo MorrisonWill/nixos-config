@@ -18,6 +18,8 @@ in {
     pavucontrol
     vlc
     brightnessctl
+    sysfsutils
+    ripgrep
 
     # TERMINAL
     neofetch
@@ -33,5 +35,10 @@ in {
     nixfmt
     default-python
     git
+
+    # I3
+    i3lock
+    rofi
+    xss-lock
   ];
 }
