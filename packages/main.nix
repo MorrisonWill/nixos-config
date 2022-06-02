@@ -25,6 +25,7 @@ in {
     neofetch
     zip
     unzip
+    exa
 
     # BROWSER
     firefox

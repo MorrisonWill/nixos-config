@@ -95,6 +95,7 @@
   # USERS
 
   users.users.user = {
+    shell = pkgs.zsh;
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
     initialPassword = "password";
