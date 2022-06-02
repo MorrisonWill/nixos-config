@@ -9,9 +9,15 @@
     ./alacritty.nix
     ./picom.nix
     ./redshift.nix
-    #./gtk.nix # breaks everything idk why
-    #./xss-lock.nix
+    ./screen-locker.nix
   ];
 
   xsession.enable = true;
+  home.pointerCursor = {
+    package = pkgs.gnome.adwaita-icon-theme;
+    gtk.enable = true;
+    x11.enable = true;
+    name = "Adwaita";
+    size = 45;
+  };
 }
