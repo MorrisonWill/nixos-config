@@ -7,10 +7,6 @@
     enableSyntaxHighlighting = true;
     defaultKeymap = "viins";
 
-    initExtra = ''
-      eval "$(zoxide init zsh)"
-    '';
-
     plugins = [
       {
         name = "powerlevel10k-config";
@@ -23,6 +19,7 @@
       enable = true;
       plugins = [
         { name = "romkatv/powerlevel10k"; tags = [ as:theme depth:1 ]; }
+	{ name = "desyncr/autols"; }
       ];
 
     };

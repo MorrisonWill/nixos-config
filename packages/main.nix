@@ -25,7 +25,6 @@ in {
     neofetch
     zip
     unzip
-    zoxide
 
     # BROWSER
     firefox

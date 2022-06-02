@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  programs.dmenu = {
+  programs.zoxide = {
     enable = true;
   };
 }

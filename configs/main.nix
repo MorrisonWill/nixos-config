@@ -10,6 +10,9 @@
     ./picom.nix
     ./redshift.nix
     ./screen-locker.nix
+    ./rofi.nix
+    ./zoxide.nix
+    ./github.nix
   ];
 
   xsession.enable = true;
