@@ -15,6 +15,7 @@
       systemd-boot.enable = true;
       efi.canTouchEfiVariables = true;
     };
+    plymouth.enable = true;
   };
 
   networking = {
@@ -49,8 +50,8 @@
   # PACKAGES
   environment = {
     systemPackages = with pkgs; [
-      neovim
-      xcape
+      neovim 
+      xcape # TODO: move xcape into home-manager?
     ];
     variables.EDITOR = "nvim";
   };

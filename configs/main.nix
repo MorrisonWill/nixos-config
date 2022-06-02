@@ -13,6 +13,7 @@
     ./rofi.nix
     ./zoxide.nix
     ./github.nix
+    ./neovim
   ];
 
   xsession.enable = true;
