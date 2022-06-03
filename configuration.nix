@@ -3,11 +3,8 @@
 {
 
   # CORE CONFIGURATION
-  imports =
-    [ 
-      ./hardware-configuration.nix
-    ];
-  
+  imports = [ ./hardware-configuration.nix ];
+
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
     cleanTmpDir = true;
@@ -39,18 +36,14 @@
       noto-fonts
       noto-fonts-cjk
       noto-fonts-emoji
-      (nerdfonts.override {
-        fonts = [
-          "FiraCode"
-	];
-      })
+      (nerdfonts.override { fonts = [ "FiraCode" ]; })
     ];
   };
 
   # PACKAGES
   environment = {
     systemPackages = with pkgs; [
-      neovim 
+      neovim
       xcape # TODO: move xcape into home-manager?
     ];
     variables.EDITOR = "nvim";
@@ -63,21 +56,19 @@
       libinput = {
         enable = true;
 
-	touchpad = {
-	  accelSpeed = "0.3";
-	  naturalScrolling = true;
-	  clickMethod = "clickfinger";
-	  tapping = true;
-	};
+        touchpad = {
+          accelSpeed = "0.3";
+          naturalScrolling = true;
+          clickMethod = "clickfinger";
+          tapping = true;
+        };
       };
 
       displayManager = {
         autoLogin.user = "user";
-	autoLogin.enable = true;
+        autoLogin.enable = true;
 
-	lightdm = {
-	  enable = true;
-	};
+        lightdm = { enable = true; };
       };
 
       desktopManager.xterm.enable = true;
@@ -127,7 +118,5 @@
 
   # SYSTEM
 
-  system = {
-    stateVersion = "22.05";
-  };
+  system = { stateVersion = "22.05"; };
 }

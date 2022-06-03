@@ -11,6 +11,7 @@ let
       flake8
       virtualenv
       jedi-language-server
+      nix-prefetch-github
     ]);
 in {
   home.packages = with pkgs; [
@@ -47,8 +48,14 @@ in {
     stylua
 
     # I3
-    i3lock
+    xsecurelock
     rofi
     xss-lock
+
+    bitwarden
+
+    xclip
+    maim
+    hacksaw
   ];
 }

@@ -1,6 +1,16 @@
 { config, lib, pkgs, ... }:
 
-{
+let
+  copilot-vim = pkgs.vimUtils.buildVimPlugin rec {
+    pname = "copilot-vim";
+    version = "1.3.4";
+    src = pkgs.fetchgit {
+      url = "https://github.com/github/copilot.vim";
+      rev = "585e1a9f6a6e39d405e46066233993ccad8bbd25";
+      hash = "sha256-xHfS1LsCVSIvmhHYbqjfGHaUIPJHFpD11by55saxA98=";
+    };
+  };
+in {
   programs.neovim = {
     enable = true;
     viAlias = true;
@@ -44,7 +54,7 @@
       cmp-buffer
       lspkind-nvim
 
-      # no copilot
+      copilot-vim
 
       ale
 
