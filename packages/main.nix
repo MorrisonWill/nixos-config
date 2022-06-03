@@ -52,10 +52,17 @@ in {
     rofi
     xss-lock
 
-    bitwarden
-
+    # SCREENSHOTS
     xclip
     maim
     hacksaw
+
+    # PRODUCTIVITY
+    bitwarden
+    libreoffice-fresh
+    transmission
+
+    # SECURITY
+    mullvad-vpn
   ];
 }

@@ -42,10 +42,7 @@
 
   # PACKAGES
   environment = {
-    systemPackages = with pkgs; [
-      neovim
-      xcape # TODO: move xcape into home-manager?
-    ];
+    systemPackages = with pkgs; [ neovim ];
     variables.EDITOR = "nvim";
   };
 
@@ -72,8 +69,6 @@
       };
 
       desktopManager.xterm.enable = true;
-
-      xkbOptions = "ctrl:swapcaps";
 
     };
     tlp.enable = true;
@@ -105,18 +100,6 @@
     '';
   };
 
-  # SYSTEMD
-  systemd.user.services."xcape" = {
-    enable = true;
-    description = "xcape to map caps to CTRL and ESC";
-    wantedBy = [ "default.target" ];
-    serviceConfig.Type = "forking";
-    serviceConfig.Restart = "always";
-    serviceConfig.RestartSec = 2;
-    serviceConfig.ExecStart = "${pkgs.xcape}/bin/xcape";
-  };
-
   # SYSTEM
-
   system = { stateVersion = "22.05"; };
 }

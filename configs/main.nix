@@ -17,6 +17,7 @@
     ./languages.nix
     ./firefox.nix
     ./nnn.nix
+    ./xcape.nix
   ];
 
   xsession.enable = true;

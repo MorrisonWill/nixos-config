@@ -8,5 +8,7 @@
 
   home.stateVersion = "22.05";
 
+  home.keyboard.options = [ "ctrl:swapcaps" ];
+
   programs.home-manager.enable = true;
 }
