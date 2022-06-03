@@ -24,6 +24,6 @@ vim.opt.dir = "/home/user/vimbackup/swap"
 vim.opt.undodir = "/home/user/vimbackup/undo"
 
 -- Fold
-vim.wo.foldmethod = 'expr'
-vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.wo.foldmethod = "expr"
+vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
 vim.wo.foldenable = false

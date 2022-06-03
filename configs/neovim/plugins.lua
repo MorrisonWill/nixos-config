@@ -29,6 +29,11 @@ require("lualine").setup({
 
 local lsp = require("lspconfig")
 lsp.gopls.setup({})
+lsp.ocamlls.setup({})
+lsp.jedi_language_server.setup({})
+lsp.rust_analyzer.setup({})
+lsp.clangd.setup({})
+lsp.rnix.setup({})
 
 require("cmp").setup({
 	sources = {
@@ -56,14 +61,14 @@ vim.g.ale_fixers = {
 	markdown = { "prettier" },
 	yaml = { "prettier" },
 
-	go = { "goimports" },
+	go = { "gofmt" },
 	rust = { "rustfmt" },
 	svelte = { "prettier" },
 	lua = { "stylua" },
-	-- python = { "black" },
+	python = { "black" },
 	c = { "clang-format" },
-	kotlin = { "ktlint" },
 	elixir = { "mix_format" },
+	nix = { "nixfmt" },
 }
 vim.g.ale_fix_on_save = 1
 vim.g.ale_disable_lsp = 1

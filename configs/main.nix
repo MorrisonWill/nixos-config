@@ -14,6 +14,7 @@
     ./zoxide.nix
     ./github.nix
     ./neovim
+    ./languages.nix
   ];
 
   xsession.enable = true;

@@ -10,6 +10,7 @@ let
       wheel
       flake8
       virtualenv
+      jedi-language-server
     ]);
 in {
   home.packages = with pkgs; [
@@ -35,6 +36,18 @@ in {
     nixfmt
     default-python
     git
+    dune_2
+    rust-analyzer
+    gopls
+    cargo
+    rustc
+    nixfmt
+    rnix-lsp
+    nodejs
+    nodePackages.npm
+    nodePackages.prettier
+    rustfmt
+    stylua
 
     # I3
     i3lock

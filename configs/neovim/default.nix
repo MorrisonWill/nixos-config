@@ -17,8 +17,6 @@
     plugins = with pkgs.vimPlugins; [
       onedark-vim
 
-
-
       nvim-treesitter
 
       # adaptive tabbing
