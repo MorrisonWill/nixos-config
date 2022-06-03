@@ -76,6 +76,8 @@
 
   services.fprintd.enable = true;
 
+  services.fstrim.enable = true;
+
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 

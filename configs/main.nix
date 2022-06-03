@@ -18,6 +18,7 @@
     ./firefox.nix
     ./nnn.nix
     ./xcape.nix
+    ./mullvad.nix
   ];
 
   xsession.enable = true;

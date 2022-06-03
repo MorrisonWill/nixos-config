@@ -61,8 +61,5 @@ in {
     bitwarden
     libreoffice-fresh
     transmission
-
-    # SECURITY
-    mullvad-vpn
   ];
 }
