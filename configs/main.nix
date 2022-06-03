@@ -15,6 +15,7 @@
     ./github.nix
     ./neovim
     ./languages.nix
+    ./firefox.nix
   ];
 
   xsession.enable = true;

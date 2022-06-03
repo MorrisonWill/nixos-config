@@ -28,9 +28,6 @@ in {
     unzip
     exa
 
-    # BROWSER
-    firefox
-
     # DEVELOPMENT
     gcc
     nixfmt
