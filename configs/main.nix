@@ -14,7 +14,7 @@
     ./zoxide.nix
     ./github.nix
     ./neovim
-    ./languages.nix
+    ./direnv.nix
     ./firefox.nix
     ./nnn.nix
     ./xcape.nix

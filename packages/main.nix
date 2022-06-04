@@ -5,12 +5,10 @@ let
   default-python = python3.withPackages (python-packages:
     with python-packages; [
       pip
-      black
       setuptools
       wheel
       flake8
       virtualenv
-      jedi-language-server
       nix-prefetch-github
     ]);
 in {
@@ -21,6 +19,7 @@ in {
     brightnessctl
     sysfsutils
     ripgrep
+    bleachbit
 
     # TERMINAL
     neofetch
@@ -39,29 +38,18 @@ in {
     nixfmt
     default-python
     git
-    dune_2
-    rust-analyzer
-    gopls
-    cargo
-    rustc
     nixfmt
     rnix-lsp
-    nodejs
-    nodePackages.npm
-    nodePackages.prettier
-    rustfmt
-    stylua
-    poetry
 
     # I3
     xsecurelock
     rofi
     xss-lock
 
-    # SCREENSHOTS
     xclip
+
+    # SCREENSHOTS
     maim
-    hacksaw
 
     # PRODUCTIVITY
     bitwarden

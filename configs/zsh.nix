@@ -14,6 +14,11 @@
         file = "p10k.zsh";
       }
       {
+        name = "nixify";
+        src = lib.cleanSource ./nixify;
+        file = "nixify.zsh";
+      }
+      {
         name = "auto-ls";
         src = lib.cleanSource ./auto-ls;
         file = "auto-ls.zsh";

@@ -71,8 +71,6 @@
       desktopManager.xterm.enable = true;
 
     };
-    tlp.enable = true;
-    thermald.enable = true;
   };
 
   services.fprintd.enable = true;
@@ -80,6 +78,9 @@
   services.fstrim.enable = true;
 
   services.mullvad-vpn.enable = true;
+
+  services.thermald.enable = true;
+  services.tlp.enable = true;
 
   sound.enable = true;
   hardware.pulseaudio.enable = true;

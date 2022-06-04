@@ -43,7 +43,7 @@
 
         "${modifier}+Shift+n" = "exec ${pkgs.alacritty}/bin/alacritty -e nnn";
 
-        "Print" = "exec maim ~/screenshot-$(date +%s).jpg $(hacksaw)";
+        "Print" = "exec maim --select ~/screenshot-$(date +%s).jpg";
       };
 
       modes = lib.mkOptionDefault {

@@ -1,12 +1,11 @@
 { config, pkgs, lib, ... }:
 
 {
-  # LANGUAGES
-  programs.go.enable = true;
 
-  # TOOLING
-  programs.opam = {
+  programs.direnv = {
     enable = true;
     enableZshIntegration = true;
+    nix-direnv.enable = true;
   };
+
 }
