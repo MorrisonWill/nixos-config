@@ -4,27 +4,27 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
-    ];
+  imports = [ (modulesPath + "/installer/scan/not-detected.nix") ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules =
+    [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
   boot.kernelParams = [ "mem_sleep_default=deep" ];
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/37f41d1d-502e-4824-9546-0a54bc6d8acc";
-      fsType = "ext4";
-    };
+  fileSystems."/" = {
+    device = "/dev/disk/by-uuid/37f41d1d-502e-4824-9546-0a54bc6d8acc";
+    fsType = "ext4";
+  };
 
-  boot.initrd.luks.devices."crypted".device = "/dev/disk/by-uuid/cc8e4f06-17ba-49e0-be11-051f71a792e1";
+  boot.initrd.luks.devices."crypted".device =
+    "/dev/disk/by-uuid/cc8e4f06-17ba-49e0-be11-051f71a792e1";
 
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/B363-DB38";
-      fsType = "vfat";
-    };
+  fileSystems."/boot" = {
+    device = "/dev/disk/by-uuid/B363-DB38";
+    fsType = "vfat";
+  };
 
   swapDevices = [ ];
 
@@ -38,10 +38,11 @@
   powerManagement = {
     enable = true;
     powertop.enable = true;
-    cpuFreqGovernor = lib.mkDefault "ondemand";
+    cpuFreqGovernor = lib.mkDefault "powersave";
   };
 
-  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.cpu.intel.updateMicrocode =
+    lib.mkDefault config.hardware.enableRedistributableFirmware;
   # high-resolution display
   hardware.video.hidpi.enable = lib.mkDefault true;
 }

@@ -72,11 +72,14 @@
 
     };
     tlp.enable = true;
+    thermald.enable = true;
   };
 
   services.fprintd.enable = true;
 
   services.fstrim.enable = true;
+
+  services.mullvad-vpn.enable = true;
 
   sound.enable = true;
   hardware.pulseaudio.enable = true;

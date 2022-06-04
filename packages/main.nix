@@ -16,7 +16,6 @@ let
 in {
   home.packages = with pkgs; [
     # MISC
-    tmate
     pavucontrol
     vlc
     brightnessctl
@@ -28,6 +27,12 @@ in {
     zip
     unzip
     exa
+    powertop
+    lm_sensors
+    rmtrash
+    trash-cli
+    upterm
+    tldr
 
     # DEVELOPMENT
     gcc
@@ -46,6 +51,7 @@ in {
     nodePackages.prettier
     rustfmt
     stylua
+    poetry
 
     # I3
     xsecurelock
@@ -61,5 +67,12 @@ in {
     bitwarden
     libreoffice-fresh
     transmission
+
+    # SECURITY
+    mullvad-vpn
+
+    # CRYPTO
+    bitcoin
+    monero
   ];
 }
