@@ -40,6 +40,7 @@ in {
     git
     nixfmt
     rnix-lsp
+    nodejs
 
     # I3
     xsecurelock

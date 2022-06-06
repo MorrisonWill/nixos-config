@@ -18,6 +18,7 @@
     ./firefox.nix
     ./nnn.nix
     ./xcape.nix
+    ./work.nix
   ];
 
   xsession.enable = true;
