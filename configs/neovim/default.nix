@@ -10,6 +10,15 @@ let
       hash = "sha256-xHfS1LsCVSIvmhHYbqjfGHaUIPJHFpD11by55saxA98=";
     };
   };
+  vim-wiki = pkgs.vimUtils.buildVimPlugin rec {
+    pname = "wiki.vim";
+    version = "0.4";
+    src = pkgs.fetchgit {
+      url = "https://github.com/lervag/wiki.vim";
+      rev = "a6da7c0f7bb27f5477f0195302534018bb75b84e";
+      hash = "sha256-7K8W5cL6MGVs7ywzR3w9EoeZJA05IqODgdRjUTggtyg=";
+    };
+  };
 in {
   programs.neovim = {
     enable = true;
@@ -55,6 +64,8 @@ in {
       lspkind-nvim
 
       copilot-vim
+
+      vim-wiki
 
       ale
 

@@ -41,6 +41,7 @@ in {
     nixfmt
     rnix-lsp
     nodejs
+    flyctl
 
     # I3
     xsecurelock

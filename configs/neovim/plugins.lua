@@ -34,6 +34,7 @@ lsp.jedi_language_server.setup({})
 lsp.rust_analyzer.setup({})
 lsp.clangd.setup({})
 lsp.rnix.setup({})
+lsp.tsserver.setup({})
 
 require("cmp").setup({
 	sources = {

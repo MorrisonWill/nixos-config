@@ -19,6 +19,11 @@ vim.opt.backup = true
 vim.opt.swapfile = true
 vim.opt.undofile = true
 
+-- Wiki
+vim.g.wiki_root = "~/notes"
+vim.g.wiki_filetypes = { "md" }
+vim.g.wiki_link_extension = ".md"
+
 vim.opt.backupdir = "/home/user/vimbackup/backup"
 vim.opt.dir = "/home/user/vimbackup/swap"
 vim.opt.undodir = "/home/user/vimbackup/undo"
