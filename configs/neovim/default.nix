@@ -67,6 +67,8 @@ in {
 
       vim-wiki
 
+      trouble-nvim
+
       ale
 
       bufferline-nvim

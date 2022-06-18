@@ -8,7 +8,6 @@ let
       setuptools
       wheel
       flake8
-      virtualenv
       nix-prefetch-github
     ]);
 in {
@@ -64,5 +63,9 @@ in {
     # CRYPTO
     bitcoin
     monero
+
+    # CHAT
+    discord # unfree
+    tdesktop
   ];
 }

@@ -108,4 +108,7 @@
 
   # SYSTEM
   system = { stateVersion = "22.05"; };
+
+  # ALLOW UNFREE
+  nixpkgs.config.allowUnfree = true;
 }
