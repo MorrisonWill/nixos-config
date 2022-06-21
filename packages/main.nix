@@ -67,5 +67,6 @@ in {
     # CHAT
     discord # unfree
     tdesktop
+    teams
   ];
 }

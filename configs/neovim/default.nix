@@ -3,11 +3,11 @@
 let
   copilot-vim = pkgs.vimUtils.buildVimPlugin rec {
     pname = "copilot-vim";
-    version = "1.3.4";
+    version = "1.4.2";
     src = pkgs.fetchgit {
       url = "https://github.com/github/copilot.vim";
-      rev = "585e1a9f6a6e39d405e46066233993ccad8bbd25";
-      hash = "sha256-xHfS1LsCVSIvmhHYbqjfGHaUIPJHFpD11by55saxA98=";
+      rev = "c2e75a3a7519c126c6fdb35984976df9ae13f564";
+      hash = "sha256-V13La54aIb3hQNDE7BmOIIZWy7In5cG6kE0fti/wxVQ=";
     };
   };
   vim-wiki = pkgs.vimUtils.buildVimPlugin rec {
