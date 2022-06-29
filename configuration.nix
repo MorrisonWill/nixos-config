@@ -88,9 +88,9 @@
   # USERS
 
   users.users.user = {
-    shell = pkgs.zsh;
+    # shell = pkgs.zsh;
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "lxd" ];
     initialPassword = "password";
   };
 
@@ -104,6 +104,14 @@
       auto-optimise-store = true
       experimental-features = nix-command flakes
     '';
+  };
+
+  # DOCKER
+  virtualisation = {
+    podman = {
+      enable = true;
+      dockerCompat = true;
+    };
   };
 
   # SYSTEM

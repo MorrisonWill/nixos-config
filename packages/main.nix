@@ -41,6 +41,8 @@ in {
     rnix-lsp
     nodejs
     flyctl
+    distrobox
+    postman
 
     # I3
     xsecurelock
@@ -68,5 +70,7 @@ in {
     discord # unfree
     tdesktop
     teams
+
+    google-chrome
   ];
 }
