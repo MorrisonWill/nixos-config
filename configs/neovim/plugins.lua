@@ -55,7 +55,7 @@ require("cmp").setup({
 vim.g.ale_fixers = {
 	json = { "prettier" },
 	javascript = { "prettier" },
-	typescript = { "prettier" },
+	typescript = { "deno" },
 	javascriptreact = { "prettier" },
 	json = { "prettier" },
 	html = { "prettier" },

@@ -31,6 +31,7 @@ in {
     trash-cli
     upterm
     tldr
+    croc
 
     # DEVELOPMENT
     gcc
@@ -42,7 +43,7 @@ in {
     nodejs
     flyctl
     distrobox
-    postman
+
 
     # I3
     xsecurelock
@@ -70,6 +71,8 @@ in {
     discord # unfree
     tdesktop
     teams
+
+    openconnect_openssl
 
     google-chrome
   ];

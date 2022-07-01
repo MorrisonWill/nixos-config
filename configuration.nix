@@ -88,7 +88,7 @@
   # USERS
 
   users.users.user = {
-    # shell = pkgs.zsh;
+    shell = pkgs.zsh;
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" "lxd" ];
     initialPassword = "password";
