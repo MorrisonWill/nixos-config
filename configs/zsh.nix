@@ -41,6 +41,7 @@
       cd = "z";
       rm = "rmtrash";
       rmdir = "rmdirtrash";
+      cat = "bat";
     };
   };
 }

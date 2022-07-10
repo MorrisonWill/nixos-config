@@ -32,6 +32,7 @@ in {
     upterm
     tldr
     croc
+    bat
 
     # DEVELOPMENT
     gcc
@@ -43,7 +44,7 @@ in {
     nodejs
     flyctl
     distrobox
-
+    burpsuite
 
     # I3
     xsecurelock
@@ -75,5 +76,8 @@ in {
     openconnect_openssl
 
     google-chrome
+
+    steam
+
   ];
 }

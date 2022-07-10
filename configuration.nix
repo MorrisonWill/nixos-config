@@ -119,4 +119,7 @@
 
   # ALLOW UNFREE
   nixpkgs.config.allowUnfree = true;
+
+  hardware.opengl.driSupport32Bit = true;
 }
+
