@@ -3,6 +3,6 @@
 {
   services.picom = {
     enable = true;
-    experimentalBackends = true;
+    vSync = true;
   };
 }

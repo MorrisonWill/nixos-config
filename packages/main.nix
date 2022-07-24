@@ -45,6 +45,8 @@ in {
     flyctl
     distrobox
     burpsuite
+    bore-cli
+    webkitgtk
 
     # I3
     xsecurelock
@@ -72,12 +74,16 @@ in {
     discord # unfree
     tdesktop
     teams
+    hexchat
+    element-desktop
 
     openconnect_openssl
 
     google-chrome
 
     steam
+
+    simplescreenrecorder
 
   ];
 }

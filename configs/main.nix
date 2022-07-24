@@ -18,6 +18,7 @@
     ./firefox.nix
     ./nnn.nix
     ./xcape.nix
+    ./syncthing.nix
   ];
 
   xsession.enable = true;

@@ -35,6 +35,7 @@ lsp.rust_analyzer.setup({})
 lsp.clangd.setup({})
 lsp.rnix.setup({})
 lsp.denols.setup({})
+-- lsp.tsserver.setup({})
 
 require("cmp").setup({
 	sources = {
@@ -56,6 +57,7 @@ vim.g.ale_fixers = {
 	json = { "prettier" },
 	javascript = { "prettier" },
 	typescript = { "deno" },
+	typescriptreact = { "prettier" },
 	javascriptreact = { "prettier" },
 	json = { "prettier" },
 	html = { "prettier" },
