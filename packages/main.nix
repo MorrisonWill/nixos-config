@@ -19,6 +19,7 @@ in {
     sysfsutils
     ripgrep
     bleachbit
+    spotify
 
     # TERMINAL
     neofetch
@@ -42,11 +43,9 @@ in {
     nixfmt
     rnix-lsp
     nodejs
-    flyctl
     distrobox
     burpsuite
     bore-cli
-    webkitgtk
 
     # I3
     xsecurelock

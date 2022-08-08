@@ -90,7 +90,7 @@
   users.users.user = {
     shell = pkgs.zsh;
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "lxd" ];
+    extraGroups = [ "wheel" "networkmanager" "lxd" "docker" ];
     initialPassword = "password";
   };
 
@@ -107,12 +107,7 @@
   };
 
   # DOCKER
-  virtualisation = {
-    podman = {
-      enable = true;
-      dockerCompat = true;
-    };
-  };
+  virtualisation.docker.enable = true;
 
   # SYSTEM
   system = { stateVersion = "22.05"; };
