@@ -42,6 +42,7 @@
       rm = "rmtrash";
       rmdir = "rmdirtrash";
       cat = "bat";
+      pn = "pnpm";
     };
   };
 }
