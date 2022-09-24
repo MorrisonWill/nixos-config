@@ -29,13 +29,13 @@ require("lualine").setup({
 
 local lsp = require("lspconfig")
 lsp.gopls.setup({})
-lsp.ocamlls.setup({})
+lsp.ocamllsp.setup({})
 lsp.jedi_language_server.setup({})
 lsp.rust_analyzer.setup({})
 lsp.clangd.setup({})
 lsp.rnix.setup({})
--- lsp.denols.setup({})
-lsp.tsserver.setup({})
+lsp.denols.setup({})
+-- lsp.tsserver.setup({})
 
 require("cmp").setup({
 	sources = {
@@ -73,6 +73,7 @@ vim.g.ale_fixers = {
 	c = { "clang-format" },
 	elixir = { "mix_format" },
 	nix = { "nixfmt" },
+	ocaml = { "ocamlformat" },
 }
 vim.g.ale_fix_on_save = 1
 vim.g.ale_disable_lsp = 1
@@ -102,3 +103,5 @@ require("toggleterm").setup({
 		},
 	},
 })
+
+require("diffview").setup({})

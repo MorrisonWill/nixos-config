@@ -34,6 +34,8 @@ in {
     '';
 
     plugins = with pkgs.vimPlugins; [
+      diffview-nvim
+
       onedark-vim
 
       nvim-treesitter

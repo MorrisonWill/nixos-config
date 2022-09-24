@@ -12,6 +12,19 @@ let
     ]);
 in {
   home.packages = with pkgs; [
+
+    # Animate library dependencies
+    gnumake
+    pkg-config
+    ocamlPackages.lablgtk
+    gnome2.libgnomecanvas
+    gnome2.libgnomecanvas.dev
+
+    cairo
+    cairo.dev
+    ocaml
+    opam
+
     # MISC
     pavucontrol
     vlc
@@ -20,6 +33,7 @@ in {
     ripgrep
     bleachbit
     spotify
+    mnemosyne
 
     # TERMINAL
     neofetch
@@ -42,10 +56,12 @@ in {
     git
     nixfmt
     rnix-lsp
-    nodejs
+    nodejs-16_x
     distrobox
     burpsuite
     bore-cli
+    gh
+    clang-tools
 
     # I3
     xsecurelock
@@ -68,6 +84,9 @@ in {
     # CRYPTO
     bitcoin
     monero
+    trezor-suite
+    trezor-udev-rules
+    trezord
 
     # CHAT
     discord # unfree
@@ -83,6 +102,12 @@ in {
     steam
 
     simplescreenrecorder
+
+    remmina
+
+    sqlitebrowser
+
+    polymc
 
   ];
 }

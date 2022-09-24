@@ -42,7 +42,7 @@
 
   # PACKAGES
   environment = {
-    systemPackages = with pkgs; [ neovim ];
+    systemPackages = with pkgs; [ neovim virt-manager ];
     variables.EDITOR = "nvim";
   };
 
@@ -50,6 +50,8 @@
     xserver = {
       enable = true;
       layout = "us";
+      xkbOptions = "compose:lwin";
+
       libinput = {
         enable = true;
 
@@ -90,7 +92,7 @@
   users.users.user = {
     shell = pkgs.zsh;
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "lxd" "docker" ];
+    extraGroups = [ "wheel" "networkmanager" "libvirtd" "docker" ];
     initialPassword = "password";
   };
 
@@ -116,5 +118,8 @@
   nixpkgs.config.allowUnfree = true;
 
   hardware.opengl.driSupport32Bit = true;
+
+  virtualisation.libvirtd.enable = true;
+  programs.dconf.enable = true;
 }
 

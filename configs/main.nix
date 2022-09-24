@@ -12,13 +12,13 @@
     ./screen-locker.nix
     ./rofi.nix
     ./zoxide.nix
-    ./github.nix
     ./neovim
     ./direnv.nix
     ./firefox.nix
     ./nnn.nix
     ./xcape.nix
     ./syncthing.nix
+    # ./opam.nix
   ];
 
   xsession.enable = true;
