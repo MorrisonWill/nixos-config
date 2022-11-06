@@ -59,7 +59,8 @@
     };
 
     extraConfig = ''
-      new_window 1pixel
+      default_border pixel 1
+      default_floating_border pixel 1
       exec xrandr --dpi 200.84
       exec i3-msg workspace 1
     '';

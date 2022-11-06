@@ -16,6 +16,7 @@ require("nvim-treesitter.configs").setup({
 			node_decremental = "<BS>",
 		},
 	},
+	parser_install_dir = "/home/user/.local/share/nvim/site/"
 })
 
 require("lualine").setup({
@@ -34,8 +35,14 @@ lsp.jedi_language_server.setup({})
 lsp.rust_analyzer.setup({})
 lsp.clangd.setup({})
 lsp.rnix.setup({})
-lsp.denols.setup({})
--- lsp.tsserver.setup({})
+-- lsp.denols.setup({})
+lsp.tsserver.setup({})
+lsp.elixirls.setup({
+	cmd = { "elixir-ls" },
+	elixirLS = {
+		dialyzerEnabled = false,
+	},
+})
 
 require("cmp").setup({
 	sources = {

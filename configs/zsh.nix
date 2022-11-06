@@ -43,6 +43,8 @@
       rmdir = "rmdirtrash";
       cat = "bat";
       pn = "pnpm";
+      emacs = "emacsclient -c -a 'emacs'";
+      doom = "~/.emacs.d/bin/doom";
     };
   };
 }

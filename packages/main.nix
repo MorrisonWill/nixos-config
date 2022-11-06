@@ -2,29 +2,18 @@
 
 with pkgs;
 let
-  default-python = python3.withPackages (python-packages:
-    with python-packages; [
-      pip
-      setuptools
-      wheel
-      flake8
-      nix-prefetch-github
-    ]);
+  default-python = python3.withPackages
+    (python-packages: with python-packages; [ pip setuptools wheel flake8 ]);
+  doom-emacs = pkgs.callPackage (builtins.fetchTarball {
+    url =
+      "https://github.com/nix-community/nix-doom-emacs/archive/master.tar.gz";
+    sha256 = "viSycvYPWInoNoVVzOKcZBtIppK18GuAawqUwGeliKM=";
+  }) {
+    doomPrivateDir = ./doom.d; # Directory containing your config.el init.el
+    # and packages.el files
+  };
 in {
   home.packages = with pkgs; [
-
-    # Animate library dependencies
-    gnumake
-    pkg-config
-    ocamlPackages.lablgtk
-    gnome2.libgnomecanvas
-    gnome2.libgnomecanvas.dev
-
-    cairo
-    cairo.dev
-    ocaml
-    opam
-
     # MISC
     pavucontrol
     vlc
@@ -107,7 +96,12 @@ in {
 
     sqlitebrowser
 
-    polymc
+    obsidian
 
+    skypeforlinux
+
+    pandoc
+
+    texlive.combined.scheme-full
   ];
 }

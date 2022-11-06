@@ -38,10 +38,10 @@ in {
 
       onedark-vim
 
-      nvim-treesitter
-
       # adaptive tabbing
       vim-sleuth
+
+      nvim-treesitter
 
       neoscroll-nvim
 

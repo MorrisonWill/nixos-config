@@ -18,6 +18,7 @@
     ./nnn.nix
     ./xcape.nix
     ./syncthing.nix
+    ./emacs.nix
     # ./opam.nix
   ];
 
