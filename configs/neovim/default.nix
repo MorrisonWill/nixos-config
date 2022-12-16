@@ -19,6 +19,15 @@ let
       hash = "sha256-7K8W5cL6MGVs7ywzR3w9EoeZJA05IqODgdRjUTggtyg=";
     };
   };
+  neovim-session-manager = pkgs.vimUtils.buildVimPlugin rec {
+    pname = "neovim-session-manager";
+    version = "0.1.0";
+    src = pkgs.fetchgit {
+      url = "https://github.com/Shatur/neovim-session-manager";
+      rev = "f8c85da390c5d1ad3bfd229ac2ed805c5742263d";
+      hash = "sha256-tNb8L7ozC7zhrrpv0O70IMsVfAvEB0RUT4J/I2bame4=";
+    };
+  };
 in {
   programs.neovim = {
     enable = true;
@@ -77,7 +86,16 @@ in {
 
       toggleterm-nvim
 
-      lightspeed-nvim
+      # lightspeed-nvim
+
+      indent-blankline-nvim
+
+      alpha-nvim
+
+      plenary-nvim
+
+      telescope-nvim
+
     ];
 
   };

@@ -2,15 +2,6 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = " "
 
--- Toggle fuzzy search
-vim.api.nvim_set_keymap(
-	"n",
-	"<Leader>f",
-	'<Cmd>lua require("telescope.builtin").find_files{ find_command = { "fd", "--type=f", "--type=l", "--hidden", "--no-ignore", "--exclude=.DS_Store", "--exclude=.git", "--exclude=bin", "--exclude=build", "--exclude=dist", "--exclude=node_modules", "--exclude=target" }}<CR>',
-	opts
-)
-vim.api.nvim_set_keymap("n", "<leader>g", "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
-
 -- Toggle file tree
 vim.api.nvim_set_keymap("n", "<Leader>e", "<Cmd>NvimTreeToggle<CR>", opts)
 

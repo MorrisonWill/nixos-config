@@ -43,6 +43,8 @@
 
         "${modifier}+Shift+n" = "exec ${pkgs.alacritty}/bin/alacritty -e nnn";
 
+        "${modifier}+Shift+v" = "exec ${pkgs.alacritty}/bin/alacritty -e nvim";
+
         "Print" = "exec maim --select ~/screenshot-$(date +%s).jpg";
       };
 

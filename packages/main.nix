@@ -73,9 +73,9 @@ in {
     # CRYPTO
     bitcoin
     monero
-    trezor-suite
-    trezor-udev-rules
-    trezord
+    # trezor-suite
+    # trezor-udev-rules
+    # trezord
 
     # CHAT
     discord # unfree
@@ -84,7 +84,8 @@ in {
     hexchat
     element-desktop
 
-    openconnect_openssl
+    # openconnect_openssl
+    openconnect
 
     google-chrome
 
@@ -103,5 +104,14 @@ in {
     pandoc
 
     texlive.combined.scheme-full
+
+    anki-bin
+
+    yarn
+
+    gnumake
+
+    fd
+
   ];
 }

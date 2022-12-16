@@ -31,18 +31,21 @@ require("lualine").setup({
 local lsp = require("lspconfig")
 lsp.gopls.setup({})
 lsp.ocamllsp.setup({})
-lsp.jedi_language_server.setup({})
+-- lsp.jedi_language_server.setup({})
+lsp.pyright.setup({})
 lsp.rust_analyzer.setup({})
 lsp.clangd.setup({})
 lsp.rnix.setup({})
 -- lsp.denols.setup({})
 lsp.tsserver.setup({})
+lsp.svelte.setup({})
 lsp.elixirls.setup({
 	cmd = { "elixir-ls" },
 	elixirLS = {
 		dialyzerEnabled = false,
 	},
 })
+lsp.vuels.setup({})
 
 require("cmp").setup({
 	sources = {
@@ -63,16 +66,16 @@ require("cmp").setup({
 vim.g.ale_fixers = {
 	json = { "prettier" },
 	javascript = { "prettier" },
-	typescript = { "deno" },
+	typescript = { "prettier" },
 	typescriptreact = { "prettier" },
 	javascriptreact = { "prettier" },
+	vue = { "prettier" },
 	json = { "prettier" },
 	html = { "prettier" },
 	css = { "prettier" },
 	markdown = { "prettier" },
 	yaml = { "prettier" },
-
-	go = { "gofmt" },
+	go = { "gofumpt" },
 	rust = { "rustfmt" },
 	svelte = { "prettier" },
 	lua = { "stylua" },
@@ -83,7 +86,14 @@ vim.g.ale_fixers = {
 	ocaml = { "ocamlformat" },
 }
 vim.g.ale_fix_on_save = 1
+-- copilot spat this out, not sure what actually disables the linting
 vim.g.ale_disable_lsp = 1
+vim.g.ale_lint_on_enter = 0
+vim.g.ale_lint_on_text_changed = "never"
+vim.g.ale_lint_on_insert_leave = 0
+vim.g.ale_lint_on_save = 0
+vim.g.ale_lint_on_filetype_changed = 0
+vim.g.ale_lint_on_insert_leave = 0
 
 require("bufferline").setup({})
 
@@ -112,3 +122,8 @@ require("toggleterm").setup({
 })
 
 require("diffview").setup({})
+
+require("alpha").setup(require'alpha.themes.dashboard'.config)
+
+require("indent_blankline").setup({})
+

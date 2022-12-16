@@ -15,6 +15,12 @@
     plymouth.enable = true;
   };
 
+  # environment.etc = {
+  #   "resolv.conf".text = ''
+  #     nameserver 1.1.1.1
+  #   '';
+  # };
+
   networking = {
     hostName = "nixos";
     networkmanager.enable = true;
