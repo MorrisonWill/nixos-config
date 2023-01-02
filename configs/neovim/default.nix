@@ -28,6 +28,16 @@ let
       hash = "sha256-tNb8L7ozC7zhrrpv0O70IMsVfAvEB0RUT4J/I2bame4=";
     };
   };
+
+  nim-vim = pkgs.vimUtils.buildVimPlugin rec {
+    pname = "nim-vim";
+    version = "0.1.0";
+    src = pkgs.fetchgit {
+      url = "https://github.com/zah/nim.vim";
+      rev = "a15714fea392b0f06ff2b282921a68c7033e39a2";
+      hash = "sha256-ZIDvVto6c9PXtE8O0vp1fL6fuDJrUrYZ0zIXtJBTw+0=";
+    };
+  };
 in {
   programs.neovim = {
     enable = true;
@@ -95,6 +105,10 @@ in {
       plenary-nvim
 
       telescope-nvim
+
+      nvim-metals
+
+      nim-vim
 
     ];
 

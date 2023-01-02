@@ -113,5 +113,26 @@ in {
 
     fd
 
+    # scala
+    jetbrains.idea-community
+    dotty
+    scala-cli
+    ammonite
+    scalafmt
+    mill
+    jdk8
+    sbt
+    coursier
+    metals
+
+    sumneko-lua-language-server
+
+    # MC
+    papermc
+    prismlauncher-qt5
+
+    zig
+    zls
+
   ];
 }
