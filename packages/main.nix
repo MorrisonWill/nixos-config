@@ -39,7 +39,7 @@ in {
     bat
 
     # DEVELOPMENT
-    gcc
+    # gcc
     nixfmt
     default-python
     git
@@ -50,7 +50,6 @@ in {
     burpsuite
     bore-cli
     gh
-    clang-tools
 
     # I3
     xsecurelock
@@ -134,5 +133,14 @@ in {
     zig
     zls
 
+    losslesscut-bin
+
+    # CPP
+    gcc
+    clang-tools
+    ninja
+    meson
+
+    burpsuite
   ];
 }

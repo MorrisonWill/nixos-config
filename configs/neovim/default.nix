@@ -110,6 +110,10 @@ in {
 
       nim-vim
 
+      nvim-dap
+
+      nvim-dap-ui
+
     ];
 
   };

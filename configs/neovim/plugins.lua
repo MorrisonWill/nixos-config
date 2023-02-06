@@ -95,6 +95,7 @@ vim.g.ale_fixers = {
 	ocaml = { "ocamlformat" },
 	scala = { "scalafmt" },
 	zig = { "zigfmt" },
+	cpp = { "clang-format" },
 }
 vim.g.ale_fix_on_save = 1
 -- copilot spat this out, not sure what actually disables the linting
